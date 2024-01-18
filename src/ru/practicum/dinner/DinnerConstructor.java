@@ -27,7 +27,7 @@ public class DinnerConstructor {
 
     void generateCombo(int numberOfCombos, ArrayList<String> dishTypeList) {
 
-        ArrayList<String> combo = null;
+        ArrayList<String> combo;
         for (int i = 1; i <= numberOfCombos; i++) {
             System.out.println("Комбо "+ i);
             combo = new ArrayList<>();
@@ -46,10 +46,7 @@ public class DinnerConstructor {
     }
 
     boolean checkType(String type) {
-        if (dinnerConstructor.containsKey(type)){
-            return true;
-        }
-        return false;
+        return dinnerConstructor.containsKey(type);
     }
 }
 
